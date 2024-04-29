@@ -97,7 +97,6 @@ main{
     height: auto;
     background-color: rgba(160, 160, 160, 0.5);
     top: 10%;
-    right: 40%;
     border-radius: 20px;
     display: flex;
     justify-content: center;
