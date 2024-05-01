@@ -38,13 +38,16 @@ let main = document.querySelector('main')
 let conteiner = document.querySelector('.conteiner')
 let icon = document.querySelector('.gg-moon')
 let anoitecer = document.querySelector('.noite')
+let tittle = document.querySelector(".tittle")
+let listView = document.querySelector('.list-view')
 anoitecer.addEventListener("click", function() {
     
     if (teste === true) {
         document.documentElement.style.setProperty('--principal-cor', 'rgb(44, 44, 44)');
         document.documentElement.style.setProperty('--secundaria-cor', 'rgb(70, 70, 70)');
+        listView.style.filter='brightness(80%)'
         anoitecer.style.background='black'
-        
+        tittle.style.color='white'
         icon.style.color='white'
         teste = false;
     } else {
@@ -52,6 +55,13 @@ anoitecer.addEventListener("click", function() {
         document.documentElement.style.setProperty('--secundaria-cor', '');
         anoitecer.style.background=''
         icon.style.color=''
+        tittle.style.color=''
+        listView.style.filter=''
         teste = true;
     }
+});
+// Adiciona evento de clique no botão "Remover"
+document.querySelector('.excluir-item').addEventListener("click", function() {
+    let listView = document.querySelector('.list-view');
+    listView.innerHTML = ''; // Limpa todos os itens da lista
 });

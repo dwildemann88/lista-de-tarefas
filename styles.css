@@ -41,6 +41,8 @@ main{
 .header{
     display: flex;
     gap: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 .conteiner{
     display: flex;
@@ -91,6 +93,7 @@ main{
     border: 2px solid var(--principal-cor);
     overflow-y: auto;
     overflow-x: hidden;
+
 }
 .adicionando{
     width: 100%;
